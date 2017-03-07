@@ -6,5 +6,13 @@ Department of Computer Science and Engineering. University of Michigan, Ann Arbo
 
 ## Table of Contents
 0. [src](#src)
+0. [lib](#lib)
 
+## Src
+
+0. This code is built in MATLAB 2016a.
+
+## Lib
+
+0. This library is adopted from the Internet written by David Gleich (https://www.cs.purdue.edu/homes/dgleich/packages/matlab_bgl/).
 
