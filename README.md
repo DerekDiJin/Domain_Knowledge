@@ -1,9 +1,10 @@
-Description: 
+# Exploratory Analysis of Graph Data by Leveraging Domain Knowledge
 
-This repository is created for the paper: "Exploratory Analysis of Graph Data by Leveraging Domain Knowledge"
+By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.eecs.umich.edu/~dkoutra/).
 
+Department of Computer Science and Engineering. University of Michigan, Ann Arbor
 
-This repository currently contains:
-
-	src/
+## Table of Contents
+0. [src](#src)
+0. [DATA](#DATA)
 
