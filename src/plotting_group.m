@@ -1,11 +1,11 @@
 
-G_o = G_b;
-G_o{size(G_b,2)+1} = G_t{1};
+G_o = reconstrcutG(G_b_Control, {69, 70, 71, 72});
+G_o{end+1} = G_t{1};
 
-T = size(G_b,2)+1;
-F = size(G_b{1},2);
+T = size(G_o,2);
+F = size(G_o{1},2);
 
-figure('units','normalized','position',[.5 .5 .7 .7]);
+figure('units','normalized','position',[.5 .5 1.0 1.0]);
 handle = tight_subplot(T, F, [0.045 .004], [0.05 0.05], [0.05 0.05]);
 
 % features = {'indeg', 'outdeg', 'pr', 'inclos', 'outclos', 'hubs', ...
@@ -17,7 +17,7 @@ handle = tight_subplot(T, F, [0.045 .004], [0.05 0.05], [0.05 0.05]);
 features = {'1.indeg', '2.outdeg', '3.pr', '4.inclos', '5.outclos', '6.hubs', ...
     '7.author', '8.cc', '9.betwe', ...
     '10.EGO(outedge)', '11.EGO(outnode)', '12.EGO(inedge)', '13.EGO(innode)', '14.EGO(edge)', ...
-    '15.EGO(node)'
+    '15.EGO(node)', 'outdegree_w'
     };
 
 %indegree outdegree pr incloseness outcloseness hubs authorities cc betweennes 
@@ -37,7 +37,7 @@ for i = 1:T
 %         ax{i}{j} = subplot( T,F,((i-1)*F+j) );      % add the jth plot in F x 1 grid
 %         [count value] = hist(curF, min(curF):(max(curF)-min(curF))/(149):max(curF));
 %         plot(log10(value), log10(count), 'o')
-        [N edges bin] = histcounts(curF, 'BinMethod', 'fd');
+        [N edges bin] = histcounts(curF, 'BinMethod', 'scott');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Linear fd
@@ -68,4 +68,4 @@ end
 %     end
 %     linkaxes(temp, 'xy');
 % end
-
+% 
