@@ -19,7 +19,7 @@ By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.ee
 ## DATA
 The data directory contains "real_train", the directory containing raw files of the domain knowledge (known graphs) and "real_test", the directory containing the input unknown graph file.
 
-## analysis
+## analysis (and supplementary results to the paper)
 The directory with experiments conducted in the paper. To run the experiments, run "exp_effectiveness", "exp_scalability_1", "exp_scalability_2" and "exp_sensitivity". For example, the evaluation of the diversity and domain-specificity of the graph invariant distributions selected by EAGLE and the baselines is conducted with the command
 ```shell
 $ exp_effectiveness
