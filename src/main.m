@@ -1,6 +1,7 @@
 clear; clc;
 
 addpath(genpath('../lib'));
+addpath(genpath('../processed'));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 % Set processed to 0 to run the whole preprocess procedure.
@@ -41,9 +42,9 @@ if processed == 0
     % G_b = extractSyntheticFiles(N_train);
 
 else
-    temp = load('processed/G_b_Cit.mat');
+    temp = load('G_b_Cit.mat');
     G_b = temp.G_b_Cit;
-    temp = load('processed/G_t_cit-HepPh.mat');
+    temp = load('G_t_cit-HepPh.mat');
     G_t = temp.G_t;
 end
 
