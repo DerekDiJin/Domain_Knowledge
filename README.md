@@ -25,7 +25,7 @@ The directory with experiments conducted in the paper. To run the experiments, r
 $ exp_effectiveness
 ``` 
 
-The supplementary results of `Satisfaction of Desired Properties` (Section V, part D) from the paper can be obtained by running the same script with different correlation metrics. To be specific, the first figure shows the evaluation based on correlation using Pearson correlation ![Pearson](imgs/pearson.png) which is the figure in the paper. The second figure shows the evaluation based on correlation using Kendall's tau. ![Kendall's tau](imgs/Kendall.png) The third figure shows the evaluation based on correlation using Spearman's rank correlation. ![Spearman](imgs/spearman.png) As stated in the paper, in all three standalone correlation metrices we observe that EAGLE outperforms the baseline methods.
+The supplementary results of `Satisfaction of Desired Properties` (Section V, part D) from the paper can be obtained by running the same script with different correlation metrics. To be specific, the first figure shows the evaluation based on correlation using Pearson correlation ![Pearson](imgs/pearson.png) which is the figure in the paper. The second figure shows the evaluation based on correlation using Kendall's tau. ![Kendall's tau](imgs/Kendall.png) The third figure shows the evaluation based on correlation using Spearman's rank correlation. ![Spearman](imgs/spearman.png) As stated in the paper, in all three cases we observe that EAGLE outperforms the baseline methods.
 
 ## extra_Features
 The directory contains the extra graph invariants computed through [SNAP](http://snap.stanford.edu/snap/index.html). 
