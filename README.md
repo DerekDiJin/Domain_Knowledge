@@ -1,5 +1,7 @@
 # Exploratory Analysis of Graph Data by Leveraging Domain Knowledge
 
+**This is the code repository for the paper: "Exploratory Analysis of Graph Data by Leveraging Domain Knowledge"**
+
 By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.eecs.umich.edu/~dkoutra/).
 
 Department of Computer Science and Engineering. University of Michigan, Ann Arbor
