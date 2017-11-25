@@ -5,6 +5,11 @@
 % 2) hardcode the trainfile, testfile name 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rng(17);
+
+addpath(genpath('../lib'));
+addpath(genpath('../src'));
+addpath(genpath('../records'));
+
 theFiles_train_names_str = {'cit-HepTh.mat', 'soc-Slashdot0811.mat'};
 theFile_test_name_str = 'soc-Slashdot0922.mat';%'cit-HepPh.mat';%
 mod = 0; % mod == 0: normal; mod == 1: approx
@@ -116,13 +121,17 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The above analysis is time-consuming: below plots the recorded results
+% Run the below code to get the result in the paper.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+candidates = [50, 100, 150, 200, 250, 300, 350, 400];
+
 figure;
-temp = load('../src/processed/times_cit.mat');
+temp = load('../records/times_cit.mat');
 times = temp.times;
 loglog(candidates, mean(times), '*-', 'linewidth', 4);
 hold on;
-temp = load('../src/processed/times_soc-Slashdot.mat');
+temp = load('../records/times_soc-Slashdot.mat');
 times = temp.times;
 loglog(candidates, mean(times), '*-', 'linewidth', 4);
 hold off;
@@ -132,23 +141,23 @@ xlabel('# features');
 ylabel('runtime (s)');
 
 figure('units','normalized','position',[.5 .5 .4 .5]);
-temp = load('times_cit.mat');
+temp = load('../records/times_cit.mat');
 times = temp.times;
 loglog(candidates, mean(times), 'b*-', 'linewidth', 4);
 hold on;
-temp = load('../src/processed/times1_cit.mat');
+temp = load('../records/times1_cit.mat');
 times_1 = temp.times_1;
-temp = load('../src/processed/times2_cit.mat');
+temp = load('../records/times2_cit.mat');
 times_2 = temp.times_2;
 loglog(candidates, mean(times-(times_1+times_2)), 'c*-', 'linewidth', 4);
 
-temp = load('../src/processed/times_soc.mat');
+temp = load('../records/times_soc.mat');
 times = temp.times;
 loglog(candidates, mean(times), 'r*-.', 'linewidth', 4);
 
-temp = load('../src/processed/times1_soc.mat');
+temp = load('../records/times1_soc.mat');
 times_1 = temp.times_1;
-temp = load('../src/processed/times2_soc.mat');
+temp = load('../records/times2_soc.mat');
 times_2 = temp.times_2;
 loglog(candidates, mean(times-(times_1+times_2)), 'm*-.', 'linewidth', 4);
 
