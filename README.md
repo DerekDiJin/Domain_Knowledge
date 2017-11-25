@@ -25,7 +25,7 @@ The directory with experiments conducted in the paper. To run the experiments, r
 $ exp_effectiveness
 ``` 
 
-The supplementary results of `Satisfaction of Desired Properties` (Section V, part D) from the paper can be obtained by running the same script with different correlation metrics. To be specific, here is the result running with ![Kendall's tau](Kendall.png)
+The supplementary results of `Satisfaction of Desired Properties` (Section V, part D) from the paper can be obtained by running the same script with different correlation metrics. To be specific, here is the result running with ![Kendall's tau](imgs/Kendall.png)
 
 ## extra_Features
 The directory contains the extra graph invariants computed through
