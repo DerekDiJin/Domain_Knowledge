@@ -6,6 +6,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rng(17);
 
+addpath(genpath('../lib'));
+addpath(genpath('../src'));
+addpath(genpath('../records'));
+
 mod = 0;    % 1 for approx, 0 for normal
 
 SynDataFolder = '../DATA/syn/';
@@ -48,10 +52,10 @@ for i = 1:1:length(G_b_files)
     for j = 1:1:T
         if mod == 0
             tic
-            [SF SFK] = SF_cal(BFK);         
+            [SF SFK] = SF_cal(BFK, 'DTW');         
             display('SF done')
 
-            [h hK] = h_cal(G_t_BF(1:curF), BFK, 'dis');       
+            [h hK] = h_cal(G_t_BF(1:curF), BFK, 'DTW', 'dis');       
             display('h done')
 
             lambda1 = 1 * 1/curF; % F*F 
@@ -99,16 +103,17 @@ for i = 1:1:length(G_b_files)
 
 end
 
-% times = times';
-% 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The above analysis is time-consuming: below plots the recorded results
+% Run the below code to get the result in the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure('units','normalized','position',[.5 .5 .4 .5]);
 % temp = load('times_scalability2_approx.mat');
 % times = temp.times;
 % s = std(times);
 % e_nor = errorbar(candidates, mean(times), s, 'linewidth', 4);
-temp = load('../output/times_scalability2_normal.mat');
+temp = load('../records/times_scalability2_normal.mat');
 times = temp.times;
 s = std(times);
 e_app = errorbar(candidates, mean(times), s, 'linewidth', 4);
@@ -121,15 +126,4 @@ ylabel('runtime (s)');
 set(gca,'fontsize',20)
 grid on;
 
-% 
-% result(:, end+1) = [0;0;0;0;0];
-% dense = zeros(5, 7);
-% 
-% for i=1:1:7
-%     
-%     dense(:,i) = result(:,i) + result(:,i+7);
-%     dense(:,i) = dense(:,i) + result(:,i+14);
-%     
-%     
-% end
 
