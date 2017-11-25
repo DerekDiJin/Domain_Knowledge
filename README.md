@@ -5,12 +5,17 @@ By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.ee
 Department of Computer Science and Engineering. University of Michigan, Ann Arbor
 
 ## Table of Contents
-0. [src](#src)
-0. [lib](#lib)
+[DATA](#DATA)
+[analysis](#analysis)
+[extra_Features](#extra_Features)
+[lib](#lib)
+[processed](#processed)
+[records](#records)
+[src](#src)
 
 ## Src
 
-0. This code is built in MATLAB 2016a.
+This code is built in MATLAB 2016a.
 
 ## Lib
 
