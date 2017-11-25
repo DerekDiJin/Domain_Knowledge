@@ -9,7 +9,7 @@ rng(17);
 
 addpath(genpath('../lib'));
 addpath(genpath('../src'));
-addpath(genpath('../src/processed'));
+addpath(genpath('../processed'));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % scagnostics: obtained from Internet
