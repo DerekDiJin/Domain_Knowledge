@@ -21,9 +21,9 @@ The data directory contains "real_train", the directory containing raw files of 
 
 ## src
 
-This code is built in MATLAB 2016a.
+This code is built in MATLAB 2016a. The preprocessing procedure is time-consuming, the command to run without preprocessing the raw data files is "main". 
 
 ## lib
 
-0. This library is adopted from the Internet written by David Gleich (https://www.cs.purdue.edu/homes/dgleich/packages/matlab_bgl/).
-
+- [matlab_bgl]: This library is adopted from the Internet written by David Gleich (https://www.cs.purdue.edu/homes/dgleich/packages/matlab_bgl/).
+1. 
