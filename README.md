@@ -4,7 +4,7 @@
 
 By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.eecs.umich.edu/~dkoutra/).
 
-Department of Computer Science and Engineering. University of Michigan, Ann Arbor
+"Summarize an unknown graph from known ones."
 
 ## Table of Contents
 - [DATA](#DATA)
@@ -15,11 +15,15 @@ Department of Computer Science and Engineering. University of Michigan, Ann Arbo
 - [records](#records)
 - [src](#src)
 
-## Src
+
+## DATA
+The data directory contains "real_train", the directory containing raw files of the domain knowledge (known graphs) and "real_test", the directory containing the input unknown graph file.
+
+## src
 
 This code is built in MATLAB 2016a.
 
-## Lib
+## lib
 
 0. This library is adopted from the Internet written by David Gleich (https://www.cs.purdue.edu/homes/dgleich/packages/matlab_bgl/).
 
