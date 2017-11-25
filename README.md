@@ -7,13 +7,13 @@ By [Di Jin](http://www-personal.umich.edu/~dijin/), [Danai Koutra](http://web.ee
 Department of Computer Science and Engineering. University of Michigan, Ann Arbor
 
 ## Table of Contents
-[DATA](#DATA)
-[analysis](#analysis)
-[extra_Features](#extra_Features)
-[lib](#lib)
-[processed](#processed)
-[records](#records)
-[src](#src)
+- [DATA](#DATA)
+- [analysis](#analysis)
+- [extra_Features](#extra_Features)
+- [lib](#lib)
+- [processed](#processed)
+- [records](#records)
+- [src](#src)
 
 ## Src
 
