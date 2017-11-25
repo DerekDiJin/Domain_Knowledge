@@ -89,10 +89,10 @@ for i = 1:1:3
         G_t_BF_COR = h_cal_prep(BFK_COR, G_t, theFile_test_name_str, 0, 'fixed', 1000, 0);
         
         % calculate SF and h
-        [SF_COR SFK_COR] = SF_cal(BFK_COR, 'Spearman'); %<<<---    
+        [SF_COR SFK_COR] = SF_cal(BFK_COR, 'Kendall'); %<<<---    
         display('SF_MI done')
 
-        [h_COR hK_COR] = h_cal(G_t_BF_COR, BFK_COR, 'Spearman', 'sim');%   <<<---             
+        [h_COR hK_COR] = h_cal(G_t_BF_COR, BFK_COR, 'Kendall', 'sim');%   <<<---             
         display('h_MI done')
         
 

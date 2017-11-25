@@ -29,10 +29,10 @@ G_t_BF = h_cal_prep(BFK, G_t, theFile_test_name_str, 0, 'scott', 0, 0);
 
  
 % calculate SF and h
-[SF SFK] = SF_cal(BFK); %<<<---    
+[SF SFK] = SF_cal(BFK, 'DTW'); %<<<---    
 display('SF done')
 
-[h hK] = h_cal(G_t_BF, BFK, 'dis');%   <<<---             
+[h hK] = h_cal(G_t_BF, BFK, 'DTW', 'dis');%   <<<---             
 display('h done')
 
 F = size(SF, 1);
@@ -71,12 +71,15 @@ for i =1:1:length(lambdas1)
     
 end
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The above analysis is time-consuming: below plots the recorded results
+% Run the below code to get the result in the paper.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 lambdas_test = -[1/(16), 1/(8), 1/(4), 1/(2), 1, 4, 8, 16, 32, 64];    %  lambda3
 lambdas = -[1/(16), 1/(8), 1/(4), 1/(2), 1, 2, 4, 8, 16, 32, 64];    %  lambda3
 
 
-temp = load('../output/sens_lambda3_log.mat');    %<<<---
+temp = load('../records/sens_lambda3_log.mat');    %<<<---
 selection = temp.selection;
 test = selection([1:5 7:end],:)
 
@@ -112,7 +115,7 @@ set(gca,'fontsize',20)
 lambdas_test = [1/(32*F), 1/(16*F), 1/(8*F), 1/(4*F), 1/(2*F), 2/F, 4/F, 8/F, 16/F, 32/F];
 lambdas = [1/(32*F), 1/(16*F), 1/(8*F), 1/(4*F), 1/(2*F), 1/F, 2/F, 4/F, 8/F, 16/F, 32/F];
 
-temp = load('../output/sens_lambda1_log.mat');    %<<<---
+temp = load('../records/sens_lambda1_log.mat');    %<<<---
 selection = temp.selection;
 test = selection([1:5 7:end],:)
 
@@ -160,8 +163,8 @@ lambda_all(2,:)=lambdas;
 lambdas = [1/(16), 1/(8), 1/(4), 1/(2), 1, 2, 4, 8, 16, 32, 64];    %  lambda3
 lambda_all(3,:)=lambdas;
 
-all_D = load('../output/all_D.mat');
-test = selection_count;
+all_D = load('../records/all_D.mat');
+test = selection_count; % from code defined in line 52.
 xValues = [1/(32), 1/(16), 1/(8), 1/(4), 1/(2), 1, 2, 4, 8, 16, 32];
 
 plot(log2(xValues), test, 'd-.', 'linewidth', 4);
